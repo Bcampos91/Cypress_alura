@@ -9,7 +9,7 @@ describe('Cadastro correto', () => {
   })
 it('ODeve preencher os campos do cadastro corretamente e clicar no botão cadastrar',() => {
   
-  cy.cadastrar('Ana Campos','apaula_cordeiro@hotmail.com','Senha1234','Senha1234')
+  cy.cadastrar('Ana Campos','apaula_cordeiro@hotmail.com','Senha1234')
   
 })
 
