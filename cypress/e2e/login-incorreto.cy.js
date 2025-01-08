@@ -3,6 +3,7 @@ describe('Página de login ', () => {
         
         cy.visit('https://adopet-frontend-cypress.vercel.app');
         cy.get('[data-test="login-button"]').click();
+        //duble de testes
         cy.intercept('POST', ' https://adopet-api-i8qu.onrender.com/adotante/login', {statuscode:400, }).as('stubPost')
     })
 
