@@ -1,5 +1,6 @@
 describe('Api Adopet', () =>{
-    const authorization = `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiNTc4NzU5YS1jNmRiLTQzODctYTQ2NC02ODQzMjQ1NjdiYjAiLCJhZG9wdGVyTmFtZSI6IkJydW5vICIsImlhdCI6MTczNjM3MjI5MSwiZXhwIjoxNzM2NjMxNDkxfQ.DIohTBbxsnaU3mNjuD0MxhiOOqfkJihTW4DqDqhfTl8`
+    const tempoEsperado = Math.random() * 1000
+    const authorization = `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiNTc4NzU5YS1jNmRiLTQzODctYTQ2NC02ODQzMjQ1NjdiYjAiLCJhZG9wdGVyTmFtZSI6IkJydW5vICIsImlhdCI6MTczNjgwNTUyNywiZXhwIjoxNzM3MDY0NzI3fQ.hn764gBsr3rvBfyis-2L05gcBMutd9E-f_RUWJuj8QI`
 
     it('Mensagens da API',() =>{
         cy.request({
@@ -10,6 +11,8 @@ describe('Api Adopet', () =>{
             expect(res.status).to.be.equal(200)
             expect(res.body).is.not.empty
             expect(res.body).to.have.property('msg')
+            //esperar que o tempo seja inferior a variavel
+            expect(res.duration).to.be.lte(tempoEsperado)
         })
     })
 })

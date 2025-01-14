@@ -1,3 +1,7 @@
+//Para consumir essa massa de dados e criar o teste, utilizamos o código a seguir:
+
+
+
 import {usuarios} from '../fixtures/usuarios.json'
 
 describe('Página de cadastro',() => {
